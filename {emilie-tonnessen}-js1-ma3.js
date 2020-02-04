@@ -7,10 +7,9 @@
         return a - b;
     } */
 
-    function testFunctionHere() {
-        console.log(answer);
-    }
+    (a, b) => { return a - b; }
 
+    
 //  QUESTION 2
 /*  Refer: lesson 2 / 4
     Make a call to the URL below, pass the JSON it returns to a function 
