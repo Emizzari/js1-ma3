@@ -31,13 +31,18 @@
 /*  Refer: lesson 3
     Replace the word cats with the word giraffes in the following sentence:
 
-    "These cats are outrageous."     */
+    "These cats are outrageous."     
+    
+    <div class="cats">
+        <p>"These cats are outrageous."</p>
+    </div>
+    <hr>                                               */
 
-    function testFunctionHere() {
-        console.log(answer);
-    }
+    let sentenceOutrageousCats = "These cats are outrageous.";
 
+    var changeCatsToGiraffes = sentenceOutrageousCats.replace(/cats/g, "giraffes");
 
+    
 //  QUESTION 4
 /*  Refer: lesson 4
     Given the URL below, write code that checks if there is a userId 
