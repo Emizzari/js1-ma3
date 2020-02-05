@@ -48,12 +48,7 @@
 /*  Refer: lesson 3
     Replace the word cats with the word giraffes in the following sentence:
 
-    "These cats are outrageous."     
-    
-    <div class="cats">
-        <p>"These cats are outrageous."</p>
-    </div>
-    <hr>                                               */
+    "These cats are outrageous."                                     */
 
     let sentenceOutrageousCats = "These cats are outrageous.";
 
