@@ -21,26 +21,29 @@
 
     `https://elephant-api.herokuapp.com/elephants`    */
 
-    const baseUrl = "https://cors-anywhere.herokuapp.com/https://elephant-api.herokuapp.com/elephants";
-    const elephantUrl = `${baseUrl}elephants`;
+    function loadGames(json) {
+        if (json.results) {
+            for (let i in json.results) {
+                console.log(json.results[i].name);
+            }
+        }
+    }
 
-    fetch(elephantUrl)
+    const url = "https://api.rawg.io/api/games?genres=sports";
+
+    fetch(url)
         .then(function (response) {
-
             return response.json();
-
         })
 
         .then(function (json) {
-
-            loadElephants(json);
-
+            loadGames(json);
         })
 
         .catch(function (error) {
-
             console.dir(error);
 
+            document.location.href = "error.html";
         });
 
 
