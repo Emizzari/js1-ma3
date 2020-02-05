@@ -19,12 +19,29 @@
     In the "catch" method of your code, redirect to "error.html" if there 
     is an error.
 
-    `https://elephant-api.herokuapp.com/elephants`
-        < div class="results" ></div > */
+    `https://elephant-api.herokuapp.com/elephants`    */
 
-    function testFunctionHere() {
-        console.log(answer);
-    }
+    const baseUrl = "https://cors-anywhere.herokuapp.com/https://elephant-api.herokuapp.com/elephants";
+    const elephantUrl = `${baseUrl}elephants`;
+
+    fetch(elephantUrl)
+        .then(function (response) {
+
+            return response.json();
+
+        })
+
+        .then(function (json) {
+
+            loadElephants(json);
+
+        })
+
+        .catch(function (error) {
+
+            console.dir(error);
+
+        });
 
 
 //  QUESTION 3
@@ -42,7 +59,7 @@
 
     var changeCatsToGiraffes = sentenceOutrageousCats.replace(/cats/g, "giraffes");
 
-    
+
 //  QUESTION 4
 /*  Refer: lesson 4
     Given the URL below, write code that checks if there is a userId 
