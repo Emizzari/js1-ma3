@@ -86,9 +86,10 @@
         <button class="btn">Click me</button>
     </div>                                                     */
 
-    function testFunctionHere() {
-        console.log(answer);
-    }
+    const container = document.querySelector(".container");
+    const button = document.querySelector(".btn");
+
+    container.removeChild(button);
 
 
 //  QUESTION 6
