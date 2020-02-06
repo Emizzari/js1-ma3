@@ -71,9 +71,20 @@
 
         https://my.site.com?userId=7      */
 
-    function testFunctionHere() {
-        console.log(answer);
-    }
+    const url = "https://my.site.com?userId=7";
+
+    fetch(url)
+        .then (function(noUserId){
+            document.location.href = "third.html"
+        })
+
+        .then (function(UserIdAndLessThan10){
+            document.location.href = "first.html"
+        })
+
+        .then(function (UserIdAndGreaterThan10){
+            document.location.href = "second.html"
+        });
 
         
 //  QUESTION 5
