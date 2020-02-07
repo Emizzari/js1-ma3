@@ -72,8 +72,8 @@
 
     let userId;
 
-    if (params.has(userId)) {
-        userid = params.get("userId");
+    if (params.has("userId")) {
+        userId = params.get("userId");
     }
 
     if (userId < 10) {
@@ -140,10 +140,10 @@
         < div class="rating" ></div > */
 
     // Making a call to the URL:
-    const GamesUrl = "https://api.rawg.io/api/games/3801";
+    const gamesUrl = "https://api.rawg.io/api/games/3801";
 
     // Creating JSON (??):
-    fetch(GamesUrl)
+    fetch(gamesUrl)
         .then(function (response) {
             return response.json();
         })
