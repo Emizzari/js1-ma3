@@ -52,7 +52,7 @@
 
     let sentence = "These cats are outrageous.";
 
-    var replaceCatsWithGiraffes = sentence.replace(/cats/g, "giraffes");
+    const replaceCatsWithGiraffes = sentence.replace(/cats/g, "giraffes");
 
 
 //  QUESTION 4
