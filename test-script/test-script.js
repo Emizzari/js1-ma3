@@ -1,35 +1,3 @@
-
-
-//  QUESTION 6
-/*  Refer: lesson 4
-    Create an li element with a text value of Parrots and a class of 
-    parrots.
-
-    Add the new item as the second item in the ul below(add it after Cows).
-
-    < ul class="animals" >
-        <li class="cows">Cows</li>
-        <li class="elephants">Elephants</li>
-    </ul > 
-                                                */
-
-    const animalsContainer = document.querySelector(".animals");
-
-    const cows = document.querySelector(".cows");
-
-    const parrots = document.createElement("li");
-
-    parrots.className = "parrots";
-
-    const liContent = document.createTextNode("Parrots");
-
-    parrots.appendChild(liContent);
-
-    animalsContainer.appendChild(parrots);
-
-    cows.after(parrots);
-
-    
 //  QUESTION 7
 /*  Refer: lesson 4
     - Make a call to the URL below 
@@ -43,7 +11,7 @@
     `https://api.rawg.io/api/games/3801`
         < div class="rating" ></div >                          */
 
-    const url = "https://api.rawg.io/api/games/3801";
+ /*   const url = "https://api.rawg.io/api/games/3801";
 
     fetch(url)
         .then(function (response) {
@@ -82,3 +50,4 @@
 
     }
 
+*/
