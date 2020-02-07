@@ -69,22 +69,24 @@
     If there is a userID parameter and its value is 10 or greater, 
     redirect to second.html.
 
-        https://my.site.com?userId=7      */
+    https://my.site.com?userId=7 */
 
-    const url = "https://my.site.com?userId=7";
+    const queryString = document.location.search;
+    const params = new URLSearchParams(queryString);
 
-    fetch(url)
-        .then (function(noUserId){
-            document.location.href = "third.html"
-        })
+    let userId;
 
-        .then (function(UserIdAndLessThan10){
-            document.location.href = "first.html"
-        })
+    if (params.has(userId)) {
+        userid = params.get("userId");
+    }
 
-        .then(function (UserIdAndGreaterThan10){
-            document.location.href = "second.html"
-        });
+    if (userId < 10) {
+        document.location.href = "first.html";
+    } else if (userId >= 10) {
+        document.location.href = "second.html"
+    } else {
+        document.location.href = "third.html"
+    }
 
         
 //  QUESTION 5
