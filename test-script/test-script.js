@@ -4,50 +4,48 @@
     - and pass the JSON it returns to a function.
 
     - Inside that function select the div from the HTML below 
-    - and assign the rating property FROM the JSON object as it's text value.
+    - and assign the "rating" property FROM the JSON object as it's text value.
 
     - In the catch method, log the error that may be returned.
 
-    `https://api.rawg.io/api/games/3801`
-        < div class="rating" ></div >                          */
+    https://api.rawg.io/api/games/3801
 
- /*   const url = "https://api.rawg.io/api/games/3801";
+    < div class="rating" ></div >  */
 
-    fetch(url)
+
+
+    
+    // Making a call to the URL:
+    const GamesUrl = "https://api.rawg.io/api/games/3801";
+
+    // Creating JSON (??):
+    fetch(GamesUrl)
         .then(function (response) {
             return response.json();
         })
 
         .then(function (json) {
-            ratingProperty(json);
+            createRating(json);
         })
 
+        // Logging an error that may be returned:
         .catch(function (error) {
             console.dir(error);
         });
 
-    function ratingProperty(json) {
-        const container = document.querySelector(".rating");
+    // Creating the function
+    function createRating(json) {
 
-        if (json.results) {
-            for (let i in json.results) {
-                console.log(json.results[i].name);
-            }
-        }
-    
-        container.innerHTML = url.container;
+        // Selecting the <div> element from HTML document:
+        const ratingContainer = document.querySelector(".rating");
 
-        const ratingContent = document.createTextNode("Insert rating property here?");
+        // Create a <p> element to contain the ratings (for personal preference):
+        const rating = document.createElement("p");
 
-        container.innerText = `Rating: ${container.rating}`
+        // Adding the <p> element after the <div>
+        ratingContainer.appendChild(rating);
 
-        
-
-
-        container.appendChild(ratingContent);
-
-        console.dir(object);
-
+        // Adding text and rating property from the JSON object:
+        rating.innerText = `Rating: ${json.rating}`;
     }
 
-*/
